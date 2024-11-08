@@ -1,6 +1,7 @@
-name = "AET_AUX"
-prefix = "aet_aux"
 mainprefix = "z"
+prefix = "aet"
+
+name = "AET Auxiliaries Mod"
 
 [properties]
 author = "Antistasi Event Team"
@@ -19,7 +20,8 @@ include = [
     "logo_co.paa",
 	"AETLogo.paa",
 	"/assets/*.paa",
-    "*.bikey"
+    "*.bikey",
+    "DiscordRichPresence*.dll"
 ]
 exclude = [
     "*.psd",        # By default this list is empty
@@ -33,29 +35,3 @@ path = "addons/main/script_version.hpp" # Default
 # minor = 1
 # patch = 1
 # git_hash = 4 # Default: 8
-
-
-
-
-[hemtt.launch.default]
-workshop = [
-    "450814997",  # CBA_A3's Workshop ID
-    "463939057",  # ACE3
-    "2369477168", # Advanced Developer Tools
-    "1779063631", # ZEN
-	"623475643",  # 3den Enhanced
-]
-
-dlc = []
-optionals = []
-
-parameters = [
-    "-window",
-    "-noPause",
-    "-noPauseAudio",
-]
-
-[hemtt.launch.Altis]
-extends = "default"
-dlc = ["ws","rf"]
-mission = "testMission.Altis"

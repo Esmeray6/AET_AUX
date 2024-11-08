@@ -4,39 +4,44 @@ class CfgFunctions
 	{
 		class Create
 		{
-			file = "z\aet_aux\addons\common\functions\create";
+			file = PATH_TO_FUNC_SUB(create);
 			
 			class LGAirstrike {};
 		};
 		class Utility
 		{
-			file = "z\aet_aux\addons\common\functions\utility";
+			file = PATH_TO_FUNC_SUB(utility);
 
 			class ValidateObjects {};
 		};
 	};
-	class AET
+	class ADDON
 	{
+		class Init
+		{
+			file = PATH_TO_FUNC;
+
+			class postInit { postInit = 1; };
+		};
 		class Players
 		{
-			file = "z\aet_aux\addons\common\functions\players";
+			file = PATH_TO_FUNC_SUB(players);
 			
-			class basicEquipment {};
-			class antiFlubber {};
-			class importPlan {};
+			class antiBounceSmokeGL {};
+			class basicEquipment {}; // Move me and break me a part into a proper addon
 			class setFaces {};
 			class startInVehicle {};
 		};
 		class AI
 		{
-			file = "z\aet_aux\addons\common\functions\ai";
+			file = PATH_TO_FUNC_SUB(ai);
 
 			class disableLayerAI {};
 			class enableLayerAI {};
 		};
 		class Utility
 		{
-			file = "z\aet_aux\addons\common\functions\utility";
+			file = PATH_TO_FUNC_SUB(utility);
 
 
 			class markTriggersInLayer {};
@@ -47,3 +52,4 @@ class CfgFunctions
 		};
 	};
 };
+
